@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="273.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" onAction="#reset" />
+            <MenuItem mnemonicParsing="false" text="Open…" onAction="#openFile" />
+            <!--<Menu mnemonicParsing="false" text="Open Recent" />-->
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Save" onAction="#save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" onAction="#saveFile" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" onAction="#shutDown" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Dropbox WIP">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Save as..."/>
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="265.0" prefWidth="492.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="14.0" layoutY="1.0" style="&#10;" text="Shopping List Application" textAlignment="CENTER" textFill="#4d4d4d" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <TextField layoutX="9.0" layoutY="32.0" prefHeight="25.0" prefWidth="341.0" promptText="Give shopping list (example: 1 milk;2 tomato;3 carrot;)" fx:id="textField" onAction="#inputItem" />
+            <TextFlow layoutX="9.0" layoutY="70.0" prefHeight="150.0" prefWidth="341.0" fx:id="textFlow"/>
+            <Button layoutX="372.0" layoutY="32.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="88.0" text="Save..." fx:id="saveButton" onAction="#saveFile"/>
+            <Button layoutX="372.0" layoutY="98.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="88.0" text="Open..." fx:id="loadButton" onAction="#openFile" />
+            <Button layoutX="372.0" layoutY="165.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="88.0" text="New" fx:id="resetButton" onAction="#reset" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
